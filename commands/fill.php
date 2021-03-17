@@ -16,7 +16,6 @@ $pdo->exec('TRUNCATE TABLE user');
 
 $posts = [];
 $categories = [];
-/*
 
 for ($i = 0; $i < 50; $i++) {
     $pdo->exec("INSERT INTO post SET 
@@ -41,7 +40,6 @@ foreach($posts as $post) {
         $pdo->exec("INSERT INTO post_category SET post_id=$post, category_id=$category");
     }
 }
-*/
 
 $passwd = password_hash('admin', PASSWORD_BCRYPT);
 $pdo->exec("INSERT INTO user SET username='admin', password='$passwd'");
